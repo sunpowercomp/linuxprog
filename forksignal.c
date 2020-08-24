@@ -11,8 +11,9 @@ int main(int argc, char *argv[])
     int i;
     int sig, result;
     pid_t pid;
-    printf("sigHandler : %d\n",count);
-    count =++
+    static int count = 0;
+    printf("sigHandler : %d\n", count);
+    count ++;
     pid=fork();
 
     // if child process not uncleard
